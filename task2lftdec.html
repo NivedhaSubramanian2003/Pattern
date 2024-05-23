@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-2</title>
+</head>
+<body>
+    <h3>Left-Decreasing</h3>
+    <div>
+        Enter a Number:<input type="text" name="num" id="num"><br>
+        <button type="button" onclick="printPattern()">Print</button><br>
+        <p id="res"></p>
+    </div>
+    <script>
+        function printPattern()
+        {
+            let n=Number(document.getElementById('num').value);
+            let result="";
+            for(let i=1;i<=n;i++)
+            {
+                for(let j=n;j>=i;j--)
+                {
+                    result+="* ";
+                }
+                result+="<br>";
+            }
+            document.getElementById('res').innerHTML=result ;  
+        }
+    </script>
+</body>
+</html>
